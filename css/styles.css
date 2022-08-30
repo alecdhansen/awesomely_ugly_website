@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@700&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+.navbar {
+  display: flex;
+  top: 0;
+  left: 0;
+  position: fixed;
+  justify-content: flex-end;
+  width: 100%;
+  background: pink;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0);
+  z-index: 10;
+}
+.navlinks {
+  width: 175px;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+.title {
+  position: relative;
+  top: 80px;
+  font-size: 20px;
+  font-family: "Silkscreen", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title::after {
+  position: absolute;
+  content: "";
+  top: 15px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  transform: scale(0.9) translateZ(0);
+  filter: blur(15px);
+  background: linear-gradient(
+    to right,
+    pink,
+    rgb(232, 182, 190),
+    rgb(195, 153, 195),
+    rgb(136, 102, 136),
+    rgb(207, 120, 185),
+    rgb(204, 70, 161),
+    rgb(249, 128, 233),
+    rgb(228, 186, 218),
+    rgba(221, 170, 220, 0.925)
+  );
+  background-size: 500% 500%;
+  animation: animateGlow 2.5s linear infinite;
+}
+
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 20%;
+  }
+}
+.blink_me {
+  animation: blinker 1s linear infinite;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  margin-top: 150px;
+  color: black;
+  font-size: larger;
+  font-style: oblique;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-display:inherit;
+
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+#main {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 100px) {
+  h2 {
+    color: green;
+  }
+}
+
+.allgirafes {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  margin-top: 300px;
+  align-items: flex-start;
+}
+.girafe1 {
+  position: absolute;
+  top: 80%;
+  left: 25%;
+  height: 200px;
+  width: 150px;
+  transform: translate(-50%, -50%);
+}
+.girafe1-start,
+.girafe1-end {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.25s;
+  backface-visibility: hidden;
+}
+.girafe1-start {
+  background-image: url(https://images.fineartamerica.com/images-medium-large-5/pink-giraffe-beauty-balance-design.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.girafe1-end {
+  background-image: url(https://images.fineartamerica.com/images-medium-large-5/pink-giraffe-beauty-balance-design.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.girafe1:hover .girafe1-start {
+  transform: rotate(359deg);
+}
+.girafe1:hover .girafe1-end {
+  transform: rotate(359deg);
+}
+
+.girafe2 {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  height: 200px;
+  width: 150px;
+  transform: translate(-50%, -50%);
+}
+.girafe2-start,
+.girafe2-end {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.25s;
+  backface-visibility: hidden;
+}
+.girafe2-start {
+  background-image: url(https://images.photowall.com/products/75248/pink-giraffe-1.jpg?h=699&q=85);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.girafe2-end {
+  background-image: url(https://images.photowall.com/products/75248/pink-giraffe-1.jpg?h=699&q=85);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.girafe2:hover .girafe2-start {
+  transform: rotateX(-45deg);
+}
+.girafe2:hover .girafe2-end {
+  transform: rotate(80deg);
+}
+
+.girafe3 {
+  position: absolute;
+  top: 80%;
+  left: 75%;
+  height: 200px;
+  width: 150px;
+  transform: translate(-50%, -50%);
+  transition: 0.25s;
+  backface-visibility: hidden;
+}
+.girafe3:hover {
+  transform: rotateX(180deg);
+  transform: rotate(359deg);
+}
+
+.girafe3 {
+  background-image: url(https://www.nicepng.com/png/detail/168-1689060_download-pink-giraffe-clipart.png);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.pollbox {
+  position: relative;
+  margin-top: 200px;
+  justify-content: center;
+}
+label,
+footer {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+label {
+  font-size: 1rem;
+  padding-right: 10px;
+}
+select {
+  font-size: 0.9rem;
+  padding: 2px 5px;
+}
+footer {
+  font-size: 0.8rem;
+  position: absolute;
+}
+.footernote {
+  position: relative;
+  margin: 100px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  border-radius: 1px;
+  float:inline-start; 
+  padding: 1px;
+  border: 5px;
+
+
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  position: relative:
+}
+.footernote img {
+  display: inline-block;
+  position: relative;
+  float: right;
+  justify-content: center;
+}
+
+
+* { box-sizing: border-box; }
+
+body,
+html { overflow-x: hidden; }
+
+.bar {
+  position: absolute;
+  top: 650px;
+  left: 0;
+  width: 100%;
+  padding: 25px 0;
+  background-color: pink;
+  color: black;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+.bar_content {
+  display: block; /* Important to give the content a width */
+
+  width: 100%;
+  transform: translateX(100%); /* Animation start out of the screen */
+
+  /* Add the animation */
+  animation: move 30s linear infinite /* infinite make reapeat the animation indefinitely */;
+}
+
+/* Create the animation */
+@keyframes move {
+  to { transform: translateX(-100%); }
+}
