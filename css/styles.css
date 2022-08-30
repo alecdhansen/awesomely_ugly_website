@@ -74,9 +74,8 @@ html {
   color: black;
   font-size: larger;
   font-style: oblique;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-display:inherit;
-
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-display: inherit;
 }
 
 @keyframes blinker {
@@ -120,12 +119,12 @@ html {
   backface-visibility: hidden;
 }
 .girafe1-start {
-  background-image: url(https://images.fineartamerica.com/images-medium-large-5/pink-giraffe-beauty-balance-design.jpg);
+  background-image: url("../images/giraffe1.jpeg");
   background-position: 50% 50%;
   background-size: cover;
 }
 .girafe1-end {
-  background-image: url(https://images.fineartamerica.com/images-medium-large-5/pink-giraffe-beauty-balance-design.jpg);
+  background-image: url("../images/giraffe1.jpeg");
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -156,12 +155,12 @@ html {
   backface-visibility: hidden;
 }
 .girafe2-start {
-  background-image: url(https://images.photowall.com/products/75248/pink-giraffe-1.jpg?h=699&q=85);
+  background-image: url("../images/giraffe2.jpeg");
   background-position: 50% 50%;
   background-size: cover;
 }
 .girafe2-end {
-  background-image: url(https://images.photowall.com/products/75248/pink-giraffe-1.jpg?h=699&q=85);
+  background-image: url("../images/giraffe2.jpeg");
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -189,7 +188,7 @@ html {
 }
 
 .girafe3 {
-  background-image: url(https://www.nicepng.com/png/detail/168-1689060_download-pink-giraffe-clipart.png);
+  background-image: url("../images/giraffe3.png");
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -223,16 +222,14 @@ footer {
   color: black;
   background-color: white;
   border-radius: 1px;
-  float:inline-start; 
+  float: inline-start;
   padding: 1px;
   border: 5px;
-
-
 }
 .footer {
   display: flex;
   justify-content: center;
-  position: relative:
+  position: relative;
 }
 .footernote img {
   display: inline-block;
@@ -241,11 +238,14 @@ footer {
   justify-content: center;
 }
 
-
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body,
-html { overflow-x: hidden; }
+html {
+  overflow-x: hidden;
+}
 
 .bar {
   position: absolute;
@@ -266,10 +266,23 @@ html { overflow-x: hidden; }
   transform: translateX(100%); /* Animation start out of the screen */
 
   /* Add the animation */
-  animation: move 30s linear infinite /* infinite make reapeat the animation indefinitely */;
+  animation: move 30s linear infinite
+    /* infinite make reapeat the animation indefinitely */;
 }
 
 /* Create the animation */
 @keyframes move {
-  to { transform: translateX(-100%); }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.footerbtn {
+  width: 60%;
+  height: 100%;
+  text-align: center;
+  background-color: rgb(90, 57, 95);
+  color: white;
+  font-family: "Silkscreen";
+  margin-top: 10px;
 }
